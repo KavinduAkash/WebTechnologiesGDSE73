@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+  <h1>Student Registration</h1>
+
+  <!-- First Name -->
+  <div>
+    <label for="fname">First Name</label>
+    <br>
+    <input type="text" id="fname" name="fname">
+  </div>
+
+  <!-- Last Name -->
+  <div>
+    <label for="lname">Last Name</label>
+    <br>
+    <input type="text" id="lname" name="lname">
+  </div>
+
+  <!-- address -->
+  <div>
+    <label for="address">Address</label>
+    <br>
+    <textarea id="address" rows="5" cols="50"></textarea>
+  </div>
+
+  <!-- Program -->
+  <div>
+    <label for="program">Select the program</label>
+    <br>
+    <select id="program" name="program">
+      <optgroup label="Backend Dev">
+        <option>Java</option>
+        <option>Python</option>
+        <option>C</option>
+      </optgroup>
+      <optgroup label="Frontend Dev">
+        <option>JavaScript</option>
+        <option>Angular</option>
+        <option>React</option>
+      </optgroup>
+    </select>
+  </div>
+
+  <div>
+    <label>Select Gender</label>
+    <br>
+    <input type="radio" id="male" name="gender"><label for="male">Male</label>
+    <br>
+    <input type="radio" id="female" name="gender"><label for="female">Female</label>
+    <br>
+    <input type="radio" id="unknown" name="gender"><label for="unknown">Unknown</label>
+  </div>
+
+  <div>
+    <label for="career">Select Future Career</label>
+    <br>
+    <input type="text" list="developer" id="career">
+    <datalist id="developer">
+      <option>Backend Developer</option>
+      <option>Frontend Developer</option>
+      <option>Fullstack Developer</option>
+      <option>Python Developer</option>
+    </datalist>
+  </div>
+
+  <br>
+  <div>
+    <button type="submit">Submit</button>
+    <button type="button">Update</button>
+    <button type="button">Delete</button>
+    <button type="reset">Reset</button>
+  </div>
+
+</form>
+
+</body>
+</html>
