@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Cascade</title>
+  <style>
+
+    section > h1 { /* 0,0,0,1 + 0,0,0,0 + 0,0,0,1 = 0,0,0,2 */
+      color: greenyellow;
+    }
+
+    body > section > h1 { /* 0,0,0,1 + 0,0,0,0 + 0,0,0,1 + 0,0,0,0 + 0,0,0,1 = 0,0,0,3*/
+      color: mediumpurple;
+    }
+
+    h1 { /* 0,0,0,1 */
+      color: red;
+    }
+
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Hello CSS!</h1>
+  </section>
+</body>
+</html>
