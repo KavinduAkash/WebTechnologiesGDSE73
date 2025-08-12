@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selector Exercises</title>
+  <style>
+    /* Students: Write your CSS here */
+
+    /* Example: 1. Style all <h1> elements */
+    /* h1 {
+         color: red;
+       } */
+  </style>
+</head>
+<body>
+<!-- Section: Basic Selectors (Q1–Q5) -->
+<h1>Heading One</h1> <!-- Q1 -->
+<p>This is a paragraph.</p> <!-- Q2 -->
+<div>This is a div block.</div> <!-- Q3 -->
+<ul> <!-- Q4 -->
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+<a href="#">A sample link</a> <!-- Q5 -->
+
+<!-- Section: Class Selectors (Q6–Q10) -->
+<div class="highlight">Highlighted area</div> <!-- Q6 -->
+<p class="note">This is a note.</p> <!-- Q7 -->
+<span class="error">This is an error.</span> <!-- Q8 -->
+<div class="box">Box content</div> <!-- Q9 -->
+<h2 class="title">Title text</h2> <!-- Q10 -->
+
+<!-- Section: ID Selectors (Q11–Q15) -->
+<div id="main1">Main Section</div> <!-- Q11 -->
+<div id="header">Header Content</div> <!-- Q12 -->
+<div id="footer">Footer Content</div> <!-- Q13 -->
+<p id="intro">Welcome paragraph</p> <!-- Q14 -->
+<div id="content1">Content section</div> <!-- Q15 -->
+
+<!-- Section: Group Selectors (Q16–Q20) -->
+<h2>Heading 2</h2> <!-- Q16 -->
+<h3>Heading 3</h3> <!-- Q16 -->
+<h4>Heading 4</h4> <!-- Q16 -->
+<div class="box">Box</div> <!-- Q17 -->
+<div class="card">Card</div> <!-- Q17 -->
+<div id="main-container">Main Container</div> <!-- Q17 -->
+<p>Grouped paragraph</p> <!-- Q18 -->
+<h2>Grouped heading</h2> <!-- Q18 -->
+<span>Sample span</span> <!-- Q19 -->
+<li>List item</li> <!-- Q19 -->
+<div class="error">Error</div> <!-- Q20 -->
+<div class="warning">Warning</div> <!-- Q20 -->
+<div class="info">Info</div> <!-- Q20 -->
+
+<!-- Section: Descendant Selectors (Q21–Q25) -->
+<p>This is a paragraph with <span>inline span</span></p> <!-- Q21 -->
+<ul class="menu"> <!-- Q22 -->
+  <li>Menu item</li>
+</ul>
+<div id="content2">
+  <b>Bold text</b> <!-- Q23 -->
+</div>
+<div>
+  <a href="#">Link inside div</a> <!-- Q24 -->
+</div>
+<div class="note">
+  <em>Emphasized inside note</em> <!-- Q25 -->
+</div>
+
+<!-- Section: Child Selectors (Q26–Q30) -->
+<ul>
+  <li>Direct item</li> <!-- Q26 -->
+  <div>
+    <li>Nested item</li>
+  </div>
+</ul>
+<div id="main2">
+  <p>Paragraph inside main</p> <!-- Q27 -->
+</div>
+<div class="section">
+  <h3>Subheading</h3> <!-- Q28 -->
+</div>
+<div class="container">
+  <div>Child div</div> <!-- Q29 -->
+</div>
+<table>
+  <tr>
+    <td>Table cell</td> <!-- Q30 -->
+  </tr>
+</table>
+
+<!-- Section: Adjacent Sibling (Q31–Q35) -->
+<h1>Main Heading</h1>
+<p>Paragraph right after H1</p> <!-- Q31 -->
+<div>Box One</div>
+<div>Box Two</div> <!-- Q32 -->
+<input type="text">
+<label>Label after input</label> <!-- Q33 -->
+<h1>Heading 1</h1>
+<h2>Heading 2</h2> <!-- Q34 -->
+<img src="#" alt="">
+<span>Image description</span> <!-- Q35 -->
+
+<!-- Section: General Sibling (Q36–Q40) -->
+<h2>Heading 2</h2>
+<p>Following paragraph</p> <!-- Q36 -->
+<form></form>
+<div class="alert">Alert box</div> <!-- Q37 -->
+<label>Name</label>
+<input type="text"> <!-- Q38 -->
+<li>First item</li>
+<li>Later item</li> <!-- Q39 -->
+<h3>Heading 3</h3>
+<h4>Follows H3</h4> <!-- Q40 -->
+
+<!-- Section: Attribute Selectors (Q41–Q45) -->
+<input type="text" placeholder="Your name"> <!-- Q41, Q45 -->
+<a href="#" target="_blank">External link</a> <!-- Q42 -->
+<button disabled>Submit</button> <!-- Q43 -->
+<div title="tooltip">Hover me</div> <!-- Q44 -->
+
+<!-- Section: Pseudo-classes (Q46–Q50) -->
+<ul>
+  <li>First</li> <!-- Q46 -->
+  <li>Second</li>
+</ul>
+<section>
+  <p>First paragraph</p>
+  <p>Last paragraph</p> <!-- Q47 -->
+</section>
+<table>
+  <tr><td>Row 1</td></tr>
+  <tr><td>Row 2</td></tr> <!-- Q48 -->
+</table>
+<input type="text"> <!-- Q49 -->
+<a href="#">Visited link</a> <!-- Q50 -->
+</body>
+</html>
