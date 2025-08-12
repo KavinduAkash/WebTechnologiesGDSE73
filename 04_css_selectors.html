@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Selectors</title>
+
+  <style>
+
+    /* ======== Type Selectors ======== */
+    /*
+    h1 {
+      color: red;
+    }
+
+    div {
+      color: purple;
+    }
+    */
+
+    /* ======== ID Selectors ======== */
+    /*
+    #myh2 {
+      color: deeppink;
+    }
+
+    #tommy {
+      color: orangered;
+    }
+    */
+
+    /* ======== Class Selectors ======== */
+    /*
+    .badasaman {
+      color: mediumpurple;
+      background-color: lightblue;
+    }
+     */
+
+    /* ======== Universal Selectors ======== */
+    /*
+    * {
+      color: blue;
+      background-color: lightblue;
+    }
+    */
+
+    /* ======== Attribute Selectors ======== */
+    /*
+    [href] {
+      background-color: pink;
+    }
+
+    [id] {
+      background-color: greenyellow;
+    }
+
+    [class] {
+      background-color: skyblue;
+    }
+    */
+
+    /* Attribute selector with the value */
+    /*
+    [href="https://www.ijse.com"] {
+      background-color: greenyellow;
+    }
+     */
+
+    /* Attribute selector with the starting value */
+    /*
+    [href^="https"] {
+      background-color: greenyellow;
+    }
+    [href^="http:"] {
+      background-color: yellow;
+    }
+     */
+
+    /* Attribute selector with the ending value */
+    /*
+    [href$="lk"] {
+      background-color: orange;
+    }
+
+    [href$="g"] {
+      background-color: gold;
+    }
+
+    [href*="code"] {
+      background-color: lime;
+    }
+
+
+    [href~="code"] {
+      background-color: lime;
+    }
+
+    h3[class] {
+      background-color: yellow;
+    }
+    */
+
+    /* ======== Pseudo Class Selectors ======== */
+    /*
+    h1:hover {
+      color: red;
+      background-color: lightpink;
+    }
+
+    h1:active {
+      color: green;
+      background-color: lightgreen;
+    }
+
+    a:link {
+      color: red;
+    }
+
+    a:visited {
+      color: gold;
+    }
+
+    input:focus {
+      background-color: pink;
+    }
+     */
+
+    /*#myListItem {*/
+    /*  color: red;*/
+    /*}*/
+
+    /* li:first-child{
+      color: red;
+    }
+
+    li:last-child{
+      color: lime;
+    }
+
+    li:nth-child(2) {
+      color: blue;
+    }
+
+    li:nth-child(3) {
+      color: gold;
+    }
+
+    li:nth-child(4) {
+      color: mediumpurple;
+    }
+
+    li:nth-child(5) {
+      color: orangered;
+    }
+
+    li:nth-child(6) {
+      color: deeppink;
+    }*/
+
+    /*li:nth-last-child(4) {
+      color: lightseagreen;
+    }*/
+
+    /*
+    li:nth-child(odd) {
+      color: gold;
+    }
+    li:nth-child(even) {
+      color: blue;
+    }
+     */
+
+    /*
+    li:nth-child(n+4) {
+      color: blue;
+    }
+     */
+
+    /*li:nth-child(3n-1) {
+      color: red;
+    }
+
+    li:nth-child(3n+1) {
+      color: purple;
+    }
+    */
+
+    /* ======== Pseudo Element Selectors ======== */
+
+    /*h1::after {
+      content: "HIIIIIII!";
+      background-color: red;
+    }
+
+    h1::before {
+      content: "Hellowwwwwwwwww!";
+      background-color: pink;
+    }
+
+    #myText::first-line {
+      background-color: pink;
+    }
+
+    #myText::first-letter {
+      color: red;
+    }*/
+
+    ::selection {
+      color: red;
+      background-color: pink;
+    }
+
+    input::placeholder {
+      color: red;
+    }
+
+    input[type="file"]::file-selector-button {
+      background-color: red;
+    }
+
+    li::marker {
+      content: "💡";
+    }
+
+    /* ======== Grouping Selectors ======== */
+
+    h1, h2, h3, #myText {
+      background-color: yellow;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<p id="myText">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus impedit iste molestiae voluptatibus? Ab alias animi, dignissimos maxime natus neque quas ratione? Assumenda consequuntur, est in placeat rerum saepe totam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus impedit iste molestiae voluptatibus? Ab alias animi, dignissimos maxime natus neque quas ratione? Assumenda consequuntur, est in placeat rerum saepe totam.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus impedit iste molestiae voluptatibus? Ab alias animi, dignissimos maxime natus neque quas ratione? Assumenda consequuntur, est in placeat rerum saepe totam.
+</p>
+
+
+<ul>
+  <li>C</li>
+  <li>C++</li>
+  <li>C#</li>
+  <li>JavaScript</li>
+  <li>Java</li>
+  <li>Python</li>
+  <li>R</li>
+</ul>
+
+<a href="https://www.ijse.lk">IJSE LK</a> <br>
+<a href="https://www.ijse.com">IJSE COM</a> <br>
+<a href="https://www.abcd.lk">ABCD</a> <br>
+<a href="http://www.wikipidia.org">Wikipidia</a> <br>
+<a href="http://www.rootcode.io">RootCodeIO</a> <br>
+<a href="http ://www.root code.io">Root CodeIO</a> <br>
+<a href="http://www.root code .io">Root Code IO</a> <br>
+
+<form>
+  <h3>Login Form</h3>
+  <div>
+    <label for="email">Email</label>
+    <br>
+    <input type="email" id="email" placeholder="jhone@gmail.com">
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <br>
+    <input type="password" id="password" placeholder="@adsas321">
+  </div>
+  <br>
+  <button type="submit">Login</button>
+</form>
+
+
+<h1>IJSE-Institute of Software Engineering</h1>
+
+<div>Let's master software engineering</div>
+<h2 id="myh2">Welcome to Web Technologies</h2>
+<p>
+  Lorem ipsum dolor sit amet, <span id="tommy">consectetur</span> adipisicing elit. Beatae deserunt dolores eos numquam omnis quisquam quo, sapiente tempora tempore vero? Debitis, doloremque in maxime modi necessitatibus officiis sit vel velit!
+</p>
+<h2>Welcome to Web Technologies Session 02</h2>
+
+<p class="badasaman">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, aliquid amet aperiam autem dolorem doloremque enim ipsam iusto nesciunt reprehenderit temporibus vel voluptatem. Harum impedit minima vero. Quos, voluptas?
+</p>
+
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, aliquid amet aperiam autem dolorem doloremque enim ipsam iusto nesciunt reprehenderit temporibus vel voluptatem. Harum impedit minima vero. Quos, voluptas?
+</p>
+
+<h3 class="badasaman">Let's learn Web development 01</h3>
+<h3>Let's learn Web development 02</h3>
+
+<p class="badasaman">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, aliquid amet aperiam autem dolorem doloremque enim ipsam iusto nesciunt reprehenderit temporibus vel voluptatem. Harum impedit minima vero. Quos, voluptas?
+</p>
+
+
+<input type="file">
+
+</body>
+</html>
