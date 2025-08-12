@@ -3,6 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS Traversing</title>
+
+    <style>
+
+      h1 {
+        color: red;
+      }
+
+      body > section:first-child > main > ul > li:first-child {
+        color: hotpink;
+      }
+
+      body > section:first-child > main > ul > li:last-child > ol > li:first-child > ul > li:first-child > dl > dd:first-child > ol > li {
+        color: green;
+      }
+
+    </style>
+
 </head>
 <body>
 <section>
@@ -10,9 +27,9 @@
     <h1>IJSE</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut debitis doloremque, doloribus dolorum exercitationem iusto labore officiis pariatur provident unde! Atque commodi deleniti mollitia totam voluptatem? Aspernatur non qui totam!</p>
     <ul>
-      <li>DEP</li>
-      <li>CMJD</li>
-      <li>
+        <li>DEP</li>
+        <li>CMJD</li>
+        <li>
         GDSE
         <ol>
           <li>
