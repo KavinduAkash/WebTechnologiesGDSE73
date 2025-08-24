@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="assets/lib/normalize.css">
+  <style>
+
+    .main-div {
+        width: 50vw; /* 50% for the viewport width */
+        height: 50vh; /* 50% for the viewport height */
+        position: absolute;
+    }
+    #div1 {
+        background: red;
+    }
+    #div2 {
+        background: green;
+        right: 0;
+    }
+    #div3 {
+        background: gold;
+        bottom: 0;
+    }
+    #div4 {
+        background: purple;
+        right: 0;
+        bottom: 0;
+    }
+
+    .main-div > div {
+        width: 200px;
+        height: 200px;
+        background: white;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        border-radius: 100%;
+    }
+
+    .main-div>div>div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    #middle-div {
+        width: 200px;
+        height: 200px;
+        background: white;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    #middle-div>div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        border-radius: 100%;
+    }
+
+    .corner-div {
+        width: 200px;
+        height: 200px;
+        background: white;
+        position: absolute;
+    }
+
+    #corner1 {
+        border-bottom-right-radius: 100%;
+    }
+
+    #corner2 {
+        right: 0;
+        border-bottom-left-radius: 100%;
+    }
+
+    #corner3 {
+        bottom: 0;
+        border-top-right-radius: 100%;
+    }
+
+    #corner4 {
+        bottom: 0;
+        right: 0;
+        border-top-left-radius: 100%;
+    }
+
+    .half {
+        width: 200px;
+        height: 200px;
+        background:white;
+        border-radius: 100%;
+        position: absolute;
+    }
+
+    #half1 {
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -100px;
+    }
+
+    #half2 {
+        bottom: -100px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="div1" class="main-div">
+      <div>
+          <div></div>
+      </div>
+  </div>
+  <div id="div2" class="main-div">
+      <div>
+          <div></div>
+      </div>
+  </div>
+  <div id="div3" class="main-div">
+      <div>
+          <div></div>
+      </div>
+  </div>
+  <div id="div4" class="main-div">
+      <div>
+          <div></div>
+      </div>
+  </div>
+
+  <div id="middle-div">
+      <div></div>
+  </div>
+
+  <div id="corner1" class="corner-div"></div>
+  <div id="corner2" class="corner-div"></div>
+  <div id="corner3" class="corner-div"></div>
+  <div id="corner4" class="corner-div"></div>
+
+  <div id="half1" class="half"></div>
+  <div id="half2" class="half"></div>
+
+
+
+</body>
+</html>
