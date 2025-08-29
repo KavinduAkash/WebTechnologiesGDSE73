@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Flex Layout</title>
+
+  <style>
+    section {
+      width: 500px;
+      height: 500px;
+      background: yellow;
+
+      display: flex;
+      /*justify-content: center;*/
+      /*justify-content: start; !* default value *!*/
+      /*justify-content: end;*/
+
+      /*align-items: center;*/
+      /*align-items: start; !* default value *!*/
+      /*align-items: end;*/
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    section>div {
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+  </style>
+
+</head>
+<body>
+
+<section>
+  <div></div>
+</section>
+
+</body>
+</html>
