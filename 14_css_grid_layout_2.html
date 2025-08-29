@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Layout</title>
+    <style>
+
+      section {
+        width: 1000px;
+        height: 500px;
+        border: 5px solid green;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      }
+
+      section > div {
+        border: 1px solid red;
+      }
+
+    </style>
+</head>
+<body>
+
+  <section>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+  </section>
+
+</body>
+</html>
