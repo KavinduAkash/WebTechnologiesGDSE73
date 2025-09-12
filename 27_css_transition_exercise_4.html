@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition Exercise 04</title>
+    <!--fontawesome icon library-->
+    <link rel="stylesheet" href="assets/lib/fontawesome/css/all.min.css">
+
+    <!--normalize library-->
+    <link rel="stylesheet" href="assets/lib/normalize.css">
+
+    <style>
+
+        section {
+            height: fit-content;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        section>div {
+            background: purple;
+            width: 200px;
+            color: white;
+            padding: 20px;
+            margin: 10px 0px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+
+            cursor: pointer;
+            position: relative;
+            margin-left: -204px;
+            transition-duration: 3000ms;
+        }
+
+        section>div:hover {
+            margin-left: 0px;
+        }
+
+        section>div>div, section>div>span {
+            position: absolute;
+
+            width: fit-content;
+            height: fit-content;
+
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        section>div>div {
+            right: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<section>
+
+    <div>
+        <span>Menu 01</span>
+        <div>
+            <i class="fa-solid fa-book"></i>
+        </div>
+    </div>
+
+    <div>
+        <span>Menu 02</span>
+        <div>
+            <i class="fa-solid fa-truck"></i>
+        </div>
+    </div>
+
+    <div>
+        <span>Menu 03</span>
+        <div>
+            <i class="fa-solid fa-users"></i>
+        </div>
+    </div>
+
+    <div>
+        <span>Menu 04</span>
+        <div>
+            <i class="fa-solid fa-phone"></i>
+        </div>
+    </div>
+
+    <div>
+        <span>Menu 05</span>
+        <div>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </div>
+</section>
+
+<!--fontawesome icon library-->
+<script src="assets/lib/fontawesome/js/all.min.js"></script>
+</body>
+</html>
