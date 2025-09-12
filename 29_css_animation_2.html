@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation</title>
+
+  <style>
+
+    div {
+      border: 4px solid purple;
+      border-radius: 100%;
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+
+      animation-name: water-drop;
+      animation-duration: 3000ms;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes water-drop {
+      from {
+        width: 30px;
+        aspect-ratio: 1/1;
+      }
+      to {
+        width: 300px;
+        aspect-ratio: 1/1;
+        opacity: 0;
+      }
+    }
+
+  </style>
+
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>
