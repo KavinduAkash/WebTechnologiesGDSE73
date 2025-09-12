@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation Advance</title>
+    <style>
+        div {
+            width: 300px;
+            aspect-ratio: 1/1;
+            background: gold;
+
+            animation-name: change-color;
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        /*@keyframes change-color {*/
+        /*    !* keyframe 01 *!*/
+        /*    from {*/
+        /*        background: gold;*/
+        /*    }*/
+        /*    !* keyframe 02 *!*/
+        /*    to {*/
+        /*        background: orangered;*/
+        /*    }*/
+        /*}*/
+
+        @keyframes change-color {
+            /* keyframe 01 */
+            0% {
+                background: gold;
+            }
+            /* keyframe 02 */
+            25% {
+                background: green;
+            }
+            /* keyframe 03 */
+            50% {
+                background: blue;
+            }
+            /* keyframe 04 */
+            75% {
+                background: purple;
+            }
+            /* keyframe 05 */
+            100% {
+                background: red;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>
