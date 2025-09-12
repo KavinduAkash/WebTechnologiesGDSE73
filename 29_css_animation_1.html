@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation</title>
+
+  <style>
+
+    div {
+      width: 100px;
+      height: 100px;
+      background: red;
+
+      animation-name: move;
+      animation-duration: 10000ms;
+      /*animation-delay: 5000ms;*/
+      /*animation-direction: normal; !* normal, reverse *!*/
+      /*animation-iteration-count: 5;*/
+      animation-iteration-count: infinite;
+      animation-direction: normal; /* normal, reverse, alternate, alternate-reverse */
+      animation-timing-function: ease-in-out; /* ease-in, ease-out, ease */
+
+    }
+
+    @keyframes move {
+        from {
+            margin-left: 0px;
+        }
+        to {
+            margin-left: 500px;
+        }
+    }
+
+  </style>
+
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>
