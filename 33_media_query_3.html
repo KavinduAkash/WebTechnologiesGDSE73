@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+
+    section {
+      width: 100vw;
+      height: fit-content;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    section>div {
+      height: 300px;
+      background: lightblue;
+      border: 5px solid blue
+    }
+
+    @media all and (max-width: 800px) {
+      section {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media all and (max-width: 500px) {
+      section {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    
+  </style>
+
+</head>
+<body>
+
+<section>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</section>
+
+</body>
+</html>

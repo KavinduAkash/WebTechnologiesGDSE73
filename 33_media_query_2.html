@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        div {
+            width: 200px;
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            background: lightpink;
+            border: 10px dotted red;
+        }
+
+        @media all and (max-width: 800px) {
+            div {
+               transform: rotate(180deg);
+            }
+        }
+        @media all and (max-width: 700px) {
+            div {
+                transform: rotate(360deg);
+            }
+        }
+        @media all and (max-width: 600px) {
+            div {
+                transform: rotate(540deg);
+            }
+        }
+        @media all and (max-width: 500px) {
+            div {
+                transform: rotate(720deg);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>
