@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation</title>
+
+  <style>
+
+    section {
+      width: 200px;
+        height: 100px;
+        background: dodgerblue;
+        position: relative;
+
+        animation-name: move;
+        animation-duration: 5000ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    .wheel {
+        width: 50px;
+        background: black;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        position: absolute;
+        bottom: -20px;
+        border: 5px dotted deeppink;
+    }
+
+    #wheel1 {
+        left: 20px;
+
+        animation-name: wheel-animation;
+        animation-duration: 5000ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    #wheel2 {
+        right: 20px;
+
+        animation-name: wheel-animation;
+        animation-duration: 5000ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes move {
+        from {
+            margin-left: 0px;
+        }
+        to {
+            margin-left: 500px;
+        }
+    }
+
+    @keyframes wheel-animation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+
+
+  </style>
+
+</head>
+<body>
+
+<section>
+    <div id="wheel1" class="wheel"></div>
+    <div id="wheel2" class="wheel"></div>
+</section>
+
+</body>
+</html>
