@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+
+      main {
+          position: relative;
+          width: fit-content;
+      }
+
+    #white-key {
+        width: 800px;
+        height: 300px;
+        background: lightgray;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+    #white-key>div {
+        background: white;
+        border: 0.5px solid grey;
+        margin: 0.5px;
+        cursor: pointer;
+        border-radius: 0 0 8px 8px;
+        transition-duration: 300ms;
+    }
+
+    #white-key>div:active {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 56px -28px inset;
+    }
+
+
+    #black-key {
+        width: 580px;
+        height: 200px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 10px;
+        margin: auto;
+    }
+
+      #black-key>div {
+          background: black;
+          border: 0.5px solid grey;
+          margin: 10px;
+          cursor: pointer;
+          border-radius: 0 0 8px 8px;
+          transition-duration: 300ms;
+      }
+
+      #black-key>div:active {
+          box-shadow: rgba(255, 255, 255, 1) 0px -50px 56px -28px inset;
+      }
+  </style>
+
+</head>
+<body>
+
+<main>
+    <section id="black-key">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section id="white-key">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+
+</body>
+</html>
