@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/lib/normalize.css">
+
+    <style>
+
+      header {
+        background: lightgray;
+        padding: 20px;
+      }
+
+      header>nav>a {
+        color: #000000;
+        transition-duration: 300ms;
+        text-decoration: none;
+      }
+
+      header>nav>a:hover {
+        color: #0091ea;
+      }
+
+      #header_web {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #header_web>nav>a {
+        padding: 0 10px;
+        text-decoration: none;
+      }
+
+      #header_mobile {
+        display: none;
+        justify-content: end;
+      }
+
+      #header_mobile>nav>a {
+        display: block;
+        padding: 10px 0;
+        text-align: end;
+      }
+
+      @media all and (max-width: 600px) {
+        #header_mobile {
+          display: flex;
+        }
+
+        #header_web {
+          display: none;
+        }
+      }
+
+    </style>
+
+</head>
+<body>
+
+  <header id="header_web">
+    <img src="assets/images/ijse.png" width="100" title="logo" alt="logo">
+    <nav>
+      <a href="">Home</a>
+      <a href="">Company</a>
+      <a href="">Services</a>
+      <a href="">Contact Us</a>
+    </nav>
+  </header>
+
+  <header id="header_mobile">
+    <nav>
+      <img src="assets/images/ijse.png" width="100" title="logo" alt="logo">
+      <a href="">Home</a>
+      <a href="">Company</a>
+      <a href="">Services</a>
+      <a href="">Contact Us</a>
+    </nav>
+  </header>
+
+</body>
+</html>
