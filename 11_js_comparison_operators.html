@@ -21,19 +21,28 @@
   console.log(a === d); // false
   console.log(a === b); // true
 
-  /*
-    != - inequality (value)
-    !== - strict inequality (Type + value)
-   */
-
+  // Inequality (!=): Checks if two values are not equal.
   console.log(a != b); // false
   console.log(a != c); // true
   console.log(a != d); // false 10 != "10"
 
+  // Strict inequality (!==): Checks if two values are not equal in value or type.
   console.log(a !== b); // false
   console.log(a !== c); // true
   console.log(a !== d); // true - Condition is always true since types 'number' and 'string' have no overlap
 
+  // Greater than (>): Checks if one value is greater than another.
+  console.log(a > c); // 10 > 6 -> true
+
+  // Less than (<): Checks if one value is less than another.
+  console.log(a < c); // 10 < 6 -> false
+
+  // Greater than or equal to (>=): Checks if one value is greater than or equal to another.
+  console.log(a > b); // 10 > 10 -> false
+  console.log(a >= b); // 10 >= 10 -> true
+
+  // Less than or equal to (<=): Checks if one value is less than or equal to another.
+  console.log(a <= b); // 10 <= 10 -> true
 </script>
 </body>
 </html>
