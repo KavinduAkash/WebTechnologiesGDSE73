@@ -62,8 +62,57 @@
   /** lastIndexOf() ========================== */
   result = x.lastIndexOf("World!"); // 15
   result = x.lastIndexOf("wow!"); // -1
+  // console.log(result);
+
+  /** match() ========================== */
+  let data = "Hello! Welcome to IJSE";
+  // result = data.match(/IJSE/g); // ["IJSE"]
+  data = "Hello! Welcome to IJSE, IJSE";
+  // result = data.match(/IJSE/g); // ["IJSE", "IJSE"]
+  result = data.match(/OXFORD/g); // null
   console.log(result);
 
+  /** replace() ========================== */
+  x = "Hello World!";
+  result = x.replace("World!", "IJSE!");
+
+  // console.log("X: ", x); // Hello World!
+  // console.log("Result: ", result); // Hello IJSE!
+
+  x = "Hello World! World!";
+  result = x.replace("World!", "IJSE!");
+  //console.log("Result: ", result); // Hello IJSE! World!
+
+  /** replaceAll() ========================== */
+
+  result = x.replaceAll("World!", "IJSE!");
+  //console.log("Result: ", result); // Hello IJSE! IJSE!
+
+  /** search() ========================== */
+  x = "Hello World!";
+  result = x.search("World"); // 6
+  result = x.search("wow"); // -1
+
+  /*
+  if(result==-1) {
+    console.log("Not Found")
+  }
+  */
+
+  // console.log(result);
+
+  /** slice() ========================== */
+  x = "Hello World!";
+  result = x.slice(2, 7); // llo W
+  // console.log(result);
+
+  /** split() ========================== */
+  fruits = "mango,banana,apple,orange";
+  result = fruits.split(",");
+  fruits = "HixxHelloxxWOWxxIJSE";
+  result = fruits.split("xx");
+  result = fruits.split("o");
+  console.log(result);
 
 </script>
 </body>
