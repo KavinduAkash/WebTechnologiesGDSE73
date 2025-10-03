@@ -112,7 +112,37 @@
   fruits = "HixxHelloxxWOWxxIJSE";
   result = fruits.split("xx");
   result = fruits.split("o");
+  //console.log(result);
+
+  /** substring() ========================== */
+  x = "Hello World!";
+  result = x.substring(2, 7); // llo W
+  // console.log(result);
+
+  /** startWith() ========================== */
+  x = "Hello World!";
+  result = x.startsWith("Hel");// true
+  result = x.startsWith("AHel");// false
+  // console.log(result);
+
+  /** toLowerCase() ========================== */
+  x = "Hello Welcome To Sri Lanka!";
+  result = x.toLowerCase(); // hello welcome to sri lanka!
+  // console.log(result);
+
+  /** toUpperCase() ========================== */
+  result = x.toUpperCase(); // HELLO WELCOME TO SRI LANKA!
+  // console.log(result);
+
+  /** trim() ========================== */
+  x = " ABCD   ";
+  console.log(x);
+  result = x.trim();
   console.log(result);
+
+  /** length ========================== */
+  x = "ABCDEF";
+  console.log(x.length); // 6
 
 </script>
 </body>
