@@ -47,7 +47,21 @@
   result = fruits.includes("pineapple"); // false
   result = fruits.includes("apple"); // true
   result = fruits.includes("ple or"); // true
+  // console.log(result);
+
+  /** indexOf() ========================== */
+  x = "Hello, World!";
+  result = x.indexOf("World!"); // 7
+  result = x.indexOf("ld!"); // 10
+
+  x = "Hello, World!, World!";
+  result = x.indexOf("World!"); // 7
+  // console.log(result);
+
+  /** lastIndexOf() ========================== */
+  result = x.lastIndexOf("World!"); // 15
   console.log(result);
+
 
 </script>
 </body>
