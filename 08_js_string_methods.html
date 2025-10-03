@@ -35,11 +35,19 @@
   let url1 = "www.ijse.lk";
   let url2 = "www.wikipidia.com";
 
-  // result = url1.endsWith(".lk"); // true
-  // result = url1.endsWith(".com"); // false
+  result = url1.endsWith(".lk"); // true
+  result = url1.endsWith(".com"); // false
   result = url2.endsWith(".com"); // true
-  console.log(result);
+  // console.log(result);
 
+  /** includes() ========================== */
+
+  let fruits = "mango bananaapple orange";
+  result = fruits.includes("orange"); // true
+  result = fruits.includes("pineapple"); // false
+  result = fruits.includes("apple"); // true
+  result = fruits.includes("ple or"); // true
+  console.log(result);
 
 </script>
 </body>
