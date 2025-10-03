@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Comparison Operators</title>
+</head>
+<body>
+
+<script>
+  var a = 10;
+  var b = 10;
+  var c = 6;
+  var d = "10";
+
+  // Equality (==): Checks if two values are equal.
+  console.log(a == b); // true
+  console.log(a == c); // false
+  console.log(a == d); // true
+
+  // Strict equality (===): Checks if two values are equal in value and type.
+  console.log(a === d); // false
+  console.log(a === b); // true
+
+  /*
+    != - inequality (value)
+    !== - strict inequality (Type + value)
+   */
+
+  console.log(a != b); // false
+  console.log(a != c); // true
+  console.log(a != d); // false 10 != "10"
+
+  console.log(a !== b); // false
+  console.log(a !== c); // true
+  console.log(a !== d); // true - Condition is always true since types 'number' and 'string' have no overlap
+
+</script>
+</body>
+</html>
