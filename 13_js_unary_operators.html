@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Unary Operators</title>
+</head>
+<body>
+
+<script>
+
+  var a = "10";
+  console.log(a + 2); // 102 (string operator)
+  console.log(+a + 2); // 12 (unary plus)
+
+  var b = "4";
+  console.log(+b); // 4 (unary plus)
+  console.log(-b); // -4 (unary minus)
+
+  var c = 5;
+  console.log(-c); // -5 (unary minus)
+
+  var x = 4;
+  // ++x;
+  // console.log("x: ", x); // 5
+
+  // --x;
+  // console.log("x: ", x); // 3
+
+  /*
+  var sum = 5 + ++x;
+  console.log("sum: ", sum); // 10
+  console.log("x: ", x); // 5
+  */
+
+  /*
+  var sum = 5 + x++;
+  console.log("sum: ", sum); // 9
+  console.log("x: ", x); // 5
+  */
+
+  /*
+  var sum = 5 + --x;
+  console.log("sum: ", sum); // 8
+  console.log("x: ", x); // 3
+  */
+
+  var sum = 5 + x--;
+  console.log("sum: ", sum); // 9
+  console.log("x: ", x); // 3
+</script>
+</body>
+</html>
