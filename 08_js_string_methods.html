@@ -7,25 +7,38 @@
 <body>
 
 <script>
+  let result;
 
   let x = "Hello, World!";
 
-  /*let result = x.charAt(7);
-  console.log(result);*/
+  /** charAt() ========================== */
+  result = x.charAt(7);
+  // console.log(result);
 
-  /*let result = x.charCodeAt(0);
+  /** charCodeAt() ========================== */
+  result = x.charCodeAt(0);
   result = x.charCodeAt(7);
-  console.log(result);*/
+  // console.log(result);
 
   let a = "Hello";
   let b = "Hi";
   let c = "Wow";
 
-  // let result = a.concat(b);
-  // let result = a.concat(b,c);
-  let result = a.concat(", ", b,", ", c, ", ", "Welcome");
-  console.log(result);
+  /** concat() ========================== */
+  result = a.concat(b);
+  result = a.concat(b,c);
+  result = a.concat(", ", b,", ", c, ", ", "Welcome");
+  // console.log(result);
 
+  /** endsWith() ========================== */
+
+  let url1 = "www.ijse.lk";
+  let url2 = "www.wikipidia.com";
+
+  // result = url1.endsWith(".lk"); // true
+  // result = url1.endsWith(".com"); // false
+  result = url2.endsWith(".com"); // true
+  console.log(result);
 
 
 </script>
