@@ -19,6 +19,38 @@
   x.push(40);
   console.log(x); // [10, 20, 30, 40]
 
+  x.push(50, 60);
+  console.log(x); // [10, 20, 30, 40, 50, 60]
+
+  /*
+  =====================================
+  unshift()
+  Adds one or more elements to the beginning of an array and returns the new length of the array.
+  */
+  x.unshift("A");
+  console.log(x); // ['A', 10, 20, 30, 40, 50, 60]
+
+  x.unshift("B", "C");
+  console.log(x); // ['B', 'C', 'A', 10, 20, 30, 40, 50, 60]
+
+  /*
+  =====================================
+  pop()
+  Removes the last element from an array and returns that element.
+  */
+  // ['B', 'C', 'A', 10, 20, 30, 40, 50, 60]
+  x.pop();
+  console.log(x); // ['B', 'C', 'A', 10, 20, 30, 40, 50]
+
+  /*
+  =====================================
+  shift()
+  Removes the first element from an array and returns that element.
+  */
+  // ['B', 'C', 'A', 10, 20, 30, 40, 50]
+  x.shift();
+  console.log(x); // // ['C', 'A', 10, 20, 30, 40, 50]
+
 </script>
 </body>
 </html>
