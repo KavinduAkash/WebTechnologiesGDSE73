@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    /*
+    // named function
+    function findOddOrEven1(value) {
+        if(value%2===0) {
+            console.log("Even Number");
+        } else {
+            console.log("Odd Number");
+        }
+    }
+
+    findOddOrEven1(9);
+
+    // function expression
+    const findOddOrEven2 = function(value) {
+        if(value%2===0) {
+            console.log("Even Number");
+        } else {
+            console.log("Odd Number");
+        }
+    }
+
+    findOddOrEven2(8);
+
+    // arrow function
+    const findOddOrEven3 = (value) => {
+        if(value%2===0) {
+            console.log("Even Number");
+        } else {
+            console.log("Odd Number");
+        }
+    }
+
+    findOddOrEven3(1);
+     */
+
+    // named function
+    function sum1(num) { // 5 -> 1+2+3+4+5 | 2 -> 1+2 | 3 -> 1+2+3
+        let sum = 0;
+        for(var i=1; i<=num; i++) {
+            sum+=i;
+        }
+        return sum;
+    }
+
+    let result1 = sum1(5);
+    console.log(result1);
+
+    // function expression
+    const sum2 = function(num) {
+        let sum = 0;
+        for(var i=1; i<=num; i++) {
+            sum+=i;
+        }
+        return sum;
+    }
+
+    let result2 = sum2(10);
+    console.log(result2);
+
+    // arrow functions
+
+    const sum3 = (num) => {
+        let sum = 0;
+        for(var i=1; i<=num; i++) {
+            sum+=i;
+        }
+        return sum;
+    }
+
+    let result3 = sum3(3);
+    console.log(result3);
+
+
+</script>
+</body>
+</html>
