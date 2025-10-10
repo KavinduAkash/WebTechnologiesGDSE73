@@ -174,7 +174,50 @@
       console.log(index + " : " + item);
   });
 
+  /*
+  =====================================
+  sort():
+  Sorts the elements of an array in place and returns the array.
+  */
+  var item_array = [20, 60, 10, 40, 50, 80, 70, 30, 100, 90];
 
+  var sorted_arry = item_array.sort();
+  console.log(sorted_arry); // [10,100,20,30,40,50,60,70,80,90]
+
+  var sorted_arry = item_array.sort((a, b) => a - b); // ascending order
+  console.log(sorted_arry); // [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+  var sorted_arry = item_array.sort((a, b) => b - a); // descending order
+  console.log(sorted_arry); // [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
+
+  /*
+  =====================================
+  reverse():
+  Reverses the order of the elements in an array.
+  */
+  var letters = ["A", "B", "C", "D"];
+  var reversed_array = letters.reverse();
+  console.log(reversed_array); // ['D', 'C', 'B', 'A']
+
+  /*
+  =====================================
+  toString():
+  Returns a string representing the specified array and its elements.
+  */
+  var z = [1, 3, 5];
+  console.log(z.toString()); // '1,3,5'
+
+  /*
+  =====================================
+  join():
+  Joins all elements of an array into a string.
+  */
+  var letters = ["A", "B", "C", "D"];
+  console.log(letters.join("*")); // 'A*B*C*D'
+  console.log(letters.join("=")); // 'A=B=C=D'
+  console.log(letters.join("->")); // 'A->B->C->D'
+  console.log(letters.join("")); // 'ABCD'
+  console.log(letters.join("^")); // 'A^B^C^D'
 </script>
 </body>
 </html>
