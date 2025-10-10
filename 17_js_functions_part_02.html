@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Functions Expression</title>
+</head>
+<body>
+
+<script>
+
+  // Function Expression
+
+  var sayHello1 = function() {
+    console.log("Hello!");
+  }
+
+  sayHello1();
+
+  var sayHello2 = function(name, location) {
+    console.log("Hello! " + name + " welcome to " + location);
+  }
+
+  sayHello2("Trump", "Sri Lanka");
+
+
+  var sayHello3 = function(name, location) {
+    return "Hello! " + name + " welcome to " + location;
+  }
+
+  let msg = sayHello3("Trump", "Sri Lanka");
+  console.log("Msg: " + msg);
+
+</script>
+</body>
+</html>
