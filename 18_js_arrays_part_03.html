@@ -22,6 +22,7 @@
   x.push(50, 60);
   console.log(x); // [10, 20, 30, 40, 50, 60]
 
+
   /*
   =====================================
   unshift()
@@ -33,6 +34,7 @@
   x.unshift("B", "C");
   console.log(x); // ['B', 'C', 'A', 10, 20, 30, 40, 50, 60]
 
+
   /*
   =====================================
   pop()
@@ -42,6 +44,7 @@
   x.pop();
   console.log(x); // ['B', 'C', 'A', 10, 20, 30, 40, 50]
 
+
   /*
   =====================================
   shift()
@@ -50,6 +53,127 @@
   // ['B', 'C', 'A', 10, 20, 30, 40, 50]
   x.shift();
   console.log(x); // // ['C', 'A', 10, 20, 30, 40, 50]
+
+
+  /*
+  =====================================
+  concat()
+  Joins two or more arrays and returns a new array.
+  */
+  var a = ["A", "B", "C"];
+  var b = ["D", "E", "F"];
+
+  var c = a.concat(b);
+  console.log(c); // ['A', 'B', 'C', 'D', 'E', 'F']
+
+  c = b.concat(a);
+  console.log(c); // ['D', 'E', 'F', 'A', 'B', 'C']
+
+  /*
+  =====================================
+  slice():
+  Returns a shallow copy of a portion of an array into a new array.
+  */
+  var y = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+  var res = y.slice();
+  console.log(res); // [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+  res = y.slice(3);
+  console.log(res); // [40, 50, 60, 70, 80, 90, 100]
+
+  res = y.slice(3, 8);
+  console.log(res); // [40, 50, 60, 70, 80]
+
+  res = y.slice(-1);
+  console.log(res); // [100]
+
+  res = y.slice(-3);
+  console.log(res); // [80, 90, 100]
+
+  /*
+  =====================================
+  splice():
+  Adds or removes elements from an array at a specified position.
+  */
+  var y = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+  let removed_items = y.splice(7);
+  console.log("Removed Items: ", removed_items); // [80, 90, 100]
+  console.log("y: ", y); // [10, 20, 30, 40, 50, 60, 70]
+
+  removed_items = y.splice(1, 5); // remove 5 elements from index 1
+  console.log("Removed Items: ", removed_items); // [20, 30, 40, 50, 60]
+  console.log("y: ", y); // [10, 70]
+
+  var y = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+  removed_items = y.splice(1, 5, 100, 200, 300);
+  console.log("Removed Items: ", removed_items); // [20, 30, 40, 50, 60]
+  console.log("y: ", y); // [10, 100, 200, 300, 70, 80, 90, 100];
+
+  /*
+  =====================================
+  includes():
+  Determines whether an array includes a certain value among its entries
+  */
+  var fruits = ["apple", "mango", "orange", "pineapple"];
+  console.log(fruits.includes("mango")); // true
+  console.log(fruits.includes("orange")); // true
+  console.log(fruits.includes("gaduguda")); // false
+
+  /*
+  =====================================
+  filter():
+  Creates a new array with all elements that pass the test implemented by the provided function.
+  */
+   var number_list = [1, 2, 3, 4, 5, 2];
+
+   /*var even_number_list = [];
+
+   for(var i=0; i<number_list.length; i++) {
+       if(number_list[i]%2===0) {
+           even_number_list.push(number_list[i]);
+       }
+   }*/
+
+  var even_number_list = number_list.filter(function(item) {
+      return item%2===0;
+  });
+
+  console.log("Even Number List: ", even_number_list);
+
+
+  /*
+  =====================================
+  forEach():
+  Executes a provided function once for each array element.
+  */
+
+  /*
+  In Java
+  =======
+  String[] fruits = {"apple", "mango", "orange", "pineapple"};
+
+  for(String item : fruits) {
+    s.o.p(item);
+  }
+  */
+  var fruits = ["apple", "mango", "orange", "pineapple"];
+  fruits.forEach(function(item){
+      console.log(item);
+  });
+
+  /*
+  =====================================
+  map():
+  Creates a new array with the results of calling a provided function on every element in the array.
+  */
+  var programming_lang = ["Java", "Python", "JavaScript", "GoLang"];
+
+  programming_lang.map((item, index) => {
+      console.log(index + " : " + item);
+  });
+
 
 </script>
 </body>
