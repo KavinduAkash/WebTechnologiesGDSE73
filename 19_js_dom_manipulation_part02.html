@@ -22,6 +22,11 @@
 
 <div>
     <ol>
+        <li>Java!</li>
+        <li>C!</li>
+        <li>C++!</li>
+    </ol>
+    <ol>
         <li>JavaScript!</li>
         <li>CSS!</li>
         <li>HTML!</li>
@@ -50,6 +55,12 @@
     // ============ getQuerySelectorAll ============
 
     document.querySelectorAll('.myClass'); // returns elements that match the specified selector
+
+    // ============ Query Selector Advanced ============
+
+    document.querySelector('div > ol:first-child > li:first-child').innerText="C#";
+
+    document.querySelector('div > ol:last-child > li:last-child').innerText="XML!";
 
 </script>
 </body>
