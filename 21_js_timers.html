@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Timers</title>
+
+  <style>
+
+    section {
+      display: flex;
+    }
+
+    section>div {
+      width: 80px;
+      aspect-ratio: 1/1;
+      background: lightblue;
+      border: 2px solid darkblue;
+      border-radius: 8px;
+      margin: 8px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<section>
+  <div>
+    <h1>A</h1>
+  </div>
+  <div>
+    <h1>B</h1>
+  </div>
+  <div>
+    <h1>C</h1>
+  </div>
+  <div>
+    <h1>D</h1>
+  </div>
+  <div>
+    <h1>E</h1>
+  </div>
+  <div>
+    <h1>F</h1>
+  </div>
+</section>
+
+
+<h2>0</h2>
+
+<h3></h3>
+
+
+<script>
+/*
+  // 1. setTimeout()
+  // setTimeout(function, delay_time)
+
+  setTimeout(() => {
+    console.log("Timeout!!!");
+  }, 6000) // 6000ms
+
+  // 1. setInterval()
+  // setInterval(function, waiting_time)
+
+  setInterval(() => {
+    console.log("Interval!!!");
+  }, 3000) // 3000ms
+
+*/
+  var arr = ["A", "B", "C", "D", "E", "F"];
+
+  setInterval(() => {
+    var pop_item = arr.pop();
+    arr.unshift(pop_item);
+
+    /*document.getElementsByTagName('h1')[0].innerText = arr[0];
+    document.getElementsByTagName('h1')[1].innerText = arr[1];
+    document.getElementsByTagName('h1')[2].innerText = arr[2];
+    document.getElementsByTagName('h1')[3].innerText = arr[3];
+    document.getElementsByTagName('h1')[4].innerText = arr[4];
+    document.getElementsByTagName('h1')[5].innerText = arr[5];*/
+
+    for (var i=0; i<arr.length; i++) {
+      document.getElementsByTagName('h1')[i].innerText = arr[i];
+    }
+
+  }, 3000)
+
+  var interval = setInterval(() => {
+    var txt = document.getElementsByTagName('h2')[0].innerText;
+    if(txt == 20) {
+      clearInterval(interval);
+    }
+
+    txt = +txt + 1;
+
+    document.getElementsByTagName('h2')[0].innerText = txt;
+
+  }, 500)
+
+
+  var name_arr = "Hello! I'm Kavindu Samarasinghe. Welcome to IJSE!".split("");
+  var idx = 0;
+  var name = "";
+
+  var interval1 = setInterval(() => {
+    if(idx !== name_arr.length) {
+      name += name_arr[idx];
+      document.getElementsByTagName('h3')[0].innerText = name;
+      idx++;
+    } else {
+      clearInterval(interval1);
+    }
+  }, 100);
+
+</script>
+</body>
+</html>
