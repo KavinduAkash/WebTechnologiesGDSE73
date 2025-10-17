@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DOM Manipulation Part 01</title>
+</head>
+<body>
+
+<h1 id="topic"> Welcome to JavaScript! </h1>
+
+<div id="myDiv"><div>Hello! Welcome to HTML!</div></div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cupiditate distinctio exercitationem facilis, labore laborum modi perspiciatis qui unde voluptatum. Nesciunt numquam repellat sunt ullam voluptate. Commodi impedit obcaecati unde!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cupiditate distinctio exercitationem facilis, labore laborum modi perspiciatis qui unde voluptatum. Nesciunt numquam repellat sunt ullam voluptate. Commodi impedit obcaecati unde!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cupiditate distinctio exercitationem facilis, labore laborum modi perspiciatis qui unde voluptatum. Nesciunt numquam repellat sunt ullam voluptate. Commodi impedit obcaecati unde!</p>
+
+<h2>Let's Learn JS</h2>
+
+
+<script>
+    // ============ getElementById ============
+    var h1_element = document.getElementById('topic');
+    console.log(h1_element.innerText); // Welcome to JavaScript!
+
+    h1_element.innerText = "Hello IJSE!"
+    console.log(h1_element.innerText); // Hello IJSE!
+
+    var myDiv = document.getElementById('myDiv');
+    console.log(myDiv.innerText); //Get text content - 'Hello! Welcome to HTML!'
+    console.log(myDiv.innerHTML); //Get HTML content - '<div>Hello! Welcome to HTML!</div>'
+
+    myDiv.innerText = "Hiiiiiiiiiii";
+    myDiv.innerHTML = "<h1>Hiiiiiii!</h1>"; // it shows <h1>Hiiiiiii!</h1> as a text
+    myDiv.innerText = "<h1>Hiiiiiii!</h1>"; // it shows <h1>Hiiiiiii!</h1> as a html element inside the div
+
+</script>
+</body>
+</html>
