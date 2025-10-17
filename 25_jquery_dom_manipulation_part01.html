@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JQuery DOM</title>
+</head>
+<body>
+
+<h1>Hello IJSE 01!</h1>
+<h1>Hello IJSE 02!</h1>
+<h2>Hello JQuery!</h2>
+
+<script src="assets/lib/jquery.js"></script>
+
+<script>
+
+  $('h1') // select h1 element
+  $('h2') // select h2 element
+
+  $('h1').text() // 'Hello IJSE 01!Hello IJSE 02!'
+  $('h1')[0] // <h1>Hello IJSE 01!</h1>
+  $('h1')[1] // <h1>Hello IJSE 02!</h1>
+  $('h1').eq(0) // select first h1 element
+  $('h1').eq(1) // select second h1 element
+
+  $('h1').eq(0).text() // 'Hello IJSE 01!'
+  $('h1').eq(1).text() // 'Hello IJSE 02!'
+
+  // document.getElementsByTagName('h1')[0].innerText = "Welcome to Sri Lanka";
+  $('h1').eq(0).text("Welcome to Sri Lanka");// update selected element inner text
+
+  $('h1').eq(1).html()
+
+  // document.getElementsByTagName('h1')[0].innerHTML = "<ol><li>hello</li></ol>";
+  $('h1').eq(1).html("<ol><li>hello</li></ol>") // update selected element inner html
+</script>
+
+</body>
+</html>

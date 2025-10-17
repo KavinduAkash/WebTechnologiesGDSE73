@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery DOM</title>
+</head>
+<body>
+
+<h1>Hello 01</h1>
+<h1>Hello 02</h1>
+<h1>Hello 03</h1>
+<h1>Hello 04</h1>
+
+<script src="assets/lib/jquery.js"></script>
+<script>
+
+    $('h1').eq(0) // 1st h1 element
+    $('h1').eq(1) // 2nd h1 element
+    $('h1').eq(2) // 3rd h1 element
+    $('h1').eq(3) // 4th h1 element
+
+    $('h1').first() // get the first h1 element in the document
+    $('h1').last() // get the last h1 element in the document
+    $('h1').first().text() // 'Hello 01'
+    $('h1').last().text() // 'Hello 04'
+
+</script>
+
+</body>
+</html>
