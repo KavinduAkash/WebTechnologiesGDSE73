@@ -7,18 +7,23 @@
 <body>
 
 <h1 id="topic"> Welcome to JavaScript! </h1>
+<h1> Welcome to CSS! </h1>
 
 <div id="myDiv"><div>Hello! Welcome to HTML!</div></div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cupiditate distinctio exercitationem facilis, labore laborum modi perspiciatis qui unde voluptatum. Nesciunt numquam repellat sunt ullam voluptate. Commodi impedit obcaecati unde!</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cupiditate distinctio exercitationem facilis, labore laborum modi perspiciatis qui unde voluptatum. Nesciunt numquam repellat sunt ullam voluptate. Commodi impedit obcaecati unde!</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cupiditate distinctio exercitationem facilis, labore laborum modi perspiciatis qui unde voluptatum. Nesciunt numquam repellat sunt ullam voluptate. Commodi impedit obcaecati unde!</p>
+<p x="" class="myDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cupiditate distinctio exercitationem facilis, labore laborum modi perspiciatis qui unde voluptatum. Nesciunt numquam repellat sunt ullam voluptate. Commodi impedit obcaecati unde!</p>
+<p class="myDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cupiditate distinctio exercitationem facilis, labore laborum modi perspiciatis qui unde voluptatum. Nesciunt numquam repellat sunt ullam voluptate. Commodi impedit obcaecati unde!</p>
+<p class="myDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cupiditate distinctio exercitationem facilis, labore laborum modi perspiciatis qui unde voluptatum. Nesciunt numquam repellat sunt ullam voluptate. Commodi impedit obcaecati unde!</p>
 
-<h2>Let's Learn JS</h2>
+<h2 name="abc">Let's Learn JS</h2>
+<h2 name="dfc">Let's Learn HTML</h2>
+<h2 name="abc">Let's Learn CSS</h2>
 
 
 <script>
     // ============ getElementById ============
+
+    /*
     var h1_element = document.getElementById('topic');
     console.log(h1_element.innerText); // Welcome to JavaScript!
 
@@ -32,6 +37,35 @@
     myDiv.innerText = "Hiiiiiiiiiii";
     myDiv.innerHTML = "<h1>Hiiiiiii!</h1>"; // it shows <h1>Hiiiiiii!</h1> as a text
     myDiv.innerText = "<h1>Hiiiiiii!</h1>"; // it shows <h1>Hiiiiiii!</h1> as a html element inside the div
+    */
+
+    // ============ getElementsByTagName ============
+
+    /*
+    var h1_list = document.getElementsByTagName('h1');
+
+    // h1_list[0]; // <h1 id="topic"> Welcome to JavaScript! </h1>
+    // h1_list[1]; // <h1> Welcome to CSS! </h1>
+    // h1_list[0].innerText; // 'Welcome to JavaScript!'
+    // h1_list[1].innerText; // 'Welcome to CSS!'
+
+    h1_list[1].innerText = "Helloooooooo!"; // update inner text
+    */
+
+    // ============ getElementsByClassName ============
+
+    var p_list = document.getElementsByClassName('myDescription');
+    // p_list[0]; // get first paragraph
+    // p_list[1]; // get second paragraph
+    // p_list[2]; // get third paragraph
+
+    // ============ getElementsByName ============
+
+    var abc_element = document.getElementsByName("abc");
+    //abc_element[0];
+    // abc_element[1];
+
+    // ============ getQuerySelector ============
 
 </script>
 </body>

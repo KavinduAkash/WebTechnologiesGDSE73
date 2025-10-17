@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DOM Manipulation Part 02</title>
+
+    <style>
+
+        /*h1 {
+          color: red;
+        }*/
+
+    </style>
+
+</head>
+<body>
+
+<h1 id="myId">Hello JavaScript!</h1>
+
+<p class="myClass">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="myClass">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+<div>
+    <ol>
+        <li>JavaScript!</li>
+        <li>CSS!</li>
+        <li>HTML!</li>
+    </ol>
+</div>
+
+<script>
+
+    // ============ getQuerySelector ============
+
+    /*
+    document.querySelector('h1'); // select h1 element
+
+    document.querySelector('h1').innerText // get inner text
+
+    document.querySelector('h1').innerText = "Hello IJSE!" // update inner text
+
+    document.querySelector('h1').innerHTML // get inner html
+
+    document.querySelector('h1').innerHTML = '<h2>Hiiiiii!</h2>' // update inner html
+    */
+
+    document.querySelector('#myId'); // select with id
+    document.querySelector('.myClass'); // returns the first element that matches the specified selector
+
+    // ============ getQuerySelectorAll ============
+
+    document.querySelectorAll('.myClass'); // returns elements that match the specified selector
+
+</script>
+</body>
+</html>
