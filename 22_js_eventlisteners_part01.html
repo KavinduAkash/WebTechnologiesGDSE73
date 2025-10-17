@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Event Listeners</title>
+</head>
+<body>
+
+<button>Click!!!</button>
+
+<script>
+    /*
+    > Event listener
+    An event listener is a function that waits for a specific event to occur on
+    an HTML element and then executes a given task
+
+    Examples for the events: click, double click, typing and etc.
+
+    */
+
+    // element.addEventListener(event, function)
+    /*document.getElementsByTagName('button')[0].addEventListener('click', function (){
+        console.log("Click!!!");
+    })*/
+
+
+    document.getElementsByTagName('button')[0].addEventListener('click', () => {
+        console.log("Click!!!");
+    })
+
+
+
+
+
+</script>
+
+</body>
+</html>

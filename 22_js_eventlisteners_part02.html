@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Event Listeners Part 02</title>
+
+    <style>
+
+      #bulb {
+        width: 100px;
+        aspect-ratio: 1/1;
+        border: 1px solid brown;
+        border-radius: 100%;
+      }
+
+      #counter {
+        width: 50px;
+        aspect-ratio: 1/1;
+        background: lightblue;
+        border: 1px solid brown;
+        border-radius: 8px;
+        color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    </style>
+</head>
+<body>
+
+<div id="bulb"></div>
+<button id="btn">ON</button>
+
+<br>
+<br>
+<br>
+<br>
+
+<div id="counter">0</div>
+<br>
+<button id="counter-btn">START</button>
+
+<br>
+<br>
+<br>
+<br>
+
+<input type="text" id="my-input">
+<h1 id="my-h1"></h1>
+
+<script>
+
+  document.getElementById('btn').addEventListener('click', function () {
+    if(document.getElementById('btn').innerText === 'ON') {
+      document.getElementById('bulb').style.background = 'yellow';
+      document.getElementById('btn').innerText = "OFF";
+    } else {
+      document.getElementById('bulb').style.background = 'none';
+      document.getElementById('btn').innerText = "ON";
+    }
+  });
+
+  // ===================================================
+
+  const counter = document.getElementById('counter');
+  const counter_btn = document.getElementById('counter-btn');
+
+  var interval;
+  counter_btn.addEventListener('click', function (){
+    if(counter_btn.innerText === "START") {
+      counter_btn.innerText = "STOP";
+      interval = setInterval(() => {
+        counter.innerText = +counter.innerText + 1;
+      }, 500);
+    } else {
+      counter_btn.innerText = "START";
+      clearInterval(interval);
+    }
+
+  });
+
+  // ===================================================
+
+  const my_input = document.getElementById('my-input');
+  const my_h1 = document.getElementById('my-h1');
+
+  my_input.addEventListener('input', function () {
+    my_h1.innerText = my_input.value;
+  });
+
+</script>
+</body>
+</html>
