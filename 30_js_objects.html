@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+  // =================== object literals ===================
+  /*
+  var s1 = {
+    f_name: "Kavindu",
+    l_name: "Akash",
+    age: 28,
+    address: "Panadura"
+  }
+
+  console.log(s1);
+
+  console.log(s1.f_name); // get
+  console.log(s1.l_name);
+  console.log(s1.address);
+
+  s1.f_name = "Ravindu"; // update
+
+  console.log(s1);
+  */
+  // =================== constructor Function ===================
+
+  /*
+  function Student(f_name, l_name, address) {
+    this.f_name=f_name;
+    this.l_name=l_name;
+    this.address=address;
+  }
+
+  var s2 = new Student("Kavindu", "Akash", "Panadura");
+
+  console.log(s2);
+
+  console.log(s2.f_name);
+  console.log(s2.l_name);
+  console.log(s2.address);
+
+  s2.f_name = "Pathum"
+  console.log(s2);
+  */
+
+  // =================== class Syntax ===================
+
+  /*
+  class Student {
+    constructor(f_name, l_name, address) {
+      this.f_name=f_name;
+      this.l_name=l_name;
+      this.address=address;
+    }
+  }
+
+  var s3 = new Student("Kavindu", "Akash", "Panadura");
+  console.log(s3);
+
+  console.log(s3.f_name);
+  console.log(s3.l_name);
+  console.log(s3.address);
+
+  s3.f_name = "Malindu"
+  console.log(s3);
+  */
+
+  class Student {
+    constructor(f_name, l_name, address) {
+      this._f_name=f_name;
+      this._l_name=l_name;
+      this._address=address;
+    }
+
+    get f_name() {
+      return this._f_name + " bro...";
+    }
+
+    set f_name(f_name) {
+      this._f_name=f_name + " machan...";
+    }
+
+  }
+
+  var s3 = new Student("Kavindu", "Akash", "Panadura");
+  console.log(s3);
+
+  console.log(s3.f_name);
+  s3.f_name = "Ravindu"
+
+  console.log(s3);
+</script>
+</body>
+</html>
