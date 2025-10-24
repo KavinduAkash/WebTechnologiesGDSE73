@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery CSS</title>
+</head>
+<body>
+
+<h1>Hello JQuery!</h1>
+
+<script src="assets/lib/jquery.js"></script>
+<script>
+
+  /*
+  document.getElementsByTagName('h1')[0].style.color = "red";
+  document.getElementsByTagName('h1')[0].style.background = "pink";
+  */
+
+  /*
+  var style = "color: red; background: pink;"
+  document.getElementsByTagName('h1')[0].style.cssText = style;
+  */
+
+  /*selector {
+    color: "red";
+    background: "pink";
+  }*/
+
+  var style = {
+    color: "blue",
+    background: "lightblue"
+  }
+
+  $('h1').eq(0).css(style)
+
+  $('h1').eq(0).css({
+    color: "orange",
+    background: "pink"
+  })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery EventListeners</title>
+    <style>
+      #box1 {
+        width: 200px;
+        aspect-ratio: 1/1;
+        background: lightblue;
+        border: 1px solid darkblue;
+      }
+    </style>
+</head>
+<body>
+
+<button>Click!</button>
+
+<div id="box1"></div>
+
+
+<label for="input1">Enter your name</label>
+<br>
+<input type="text" id="input1">
+<h1 id="txt"></h1>
+
+
+
+<script src="assets/lib/jquery.js"></script>
+
+<script>
+  /*
+  document.getElementsByTagName('button')[0].addEventListener('click', function () {
+    console.log("Clicked!");
+  })
+  */
+
+  /* ------------- single click ------------- */
+  $('button').eq(0).on('click', function (){
+    console.log("Single Clicked!");
+  })
+
+  /* ------------- double click ------------- */
+  $('button').eq(0).on('dblclick', function (){
+    console.log("Double Clicked!");
+  })
+
+  /* ------------- mouse enter ------------- */
+  $('#box1').on('mouseenter', function (){
+    console.log('Mouse Enter!')
+  })
+
+  /* ------------- mouse leave ------------- */
+  $('#box1').on('mouseleave', function (){
+    console.log('Mouse Leave!')
+  })
+
+  /* ------------- mouse over ------------- */
+  $('#box1').on('mouseover', function (){
+    console.log('Mouse Over!')
+  })
+
+  /* ------------- mouse down ------------- */
+  $('#box1').on('mousedown', function (){
+    console.log('Mouse Down!')
+  })
+
+  /* ------------- mouse up ------------- */
+  $('#box1').on('mouseup', function (){
+    console.log('Mouse Up!')
+  })
+
+  /* ------------- focus ------------- */
+  $('#input1').on('focus', function (){
+    console.log('Focused!')
+  })
+
+  /* ------------- blur(focus out) ------------- */
+  $('#input1').on('blur', function (){
+    console.log('Blur!')
+  })
+
+  /* ------------- keydown ------------- */
+  $('#input1').on('keydown', function (){
+    console.log('Key Down!')
+  })
+
+  /* ------------- keypress ------------- */
+  /*
+  $('#input1').on('keypress', function (){
+    console.log('Key Press!')
+  })
+  */
+
+  // $('#input1').on('keypress', function (){
+  //   var value = $('#input1').val();
+  //   $('#txt').text(value)
+  // })
+
+  /* ------------- keyup ------------- */
+  // $('#input1').on('keyup', function (){
+  //   console.log('Key Up!')
+  // })
+
+  /*
+  $('#input1').on('keyup', function (){
+    var value = $('#input1').val();
+    $('#txt').text(value)
+  })
+  */
+
+  // https://kavinduakash.medium.com/key-codes-list-bad912686e70
+  $('#input1').on('keyup', function (e){
+    console.log(e.which);
+    if(e.which === 13) {
+      var value = $('#input1').val();
+      $('#txt').text(value)
+    }
+  })
+
+
+
+
+</script>
+
+</body>
+</html>
