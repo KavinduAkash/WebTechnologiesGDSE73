@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS OOP</title>
+</head>
+<body>
+
+<script>
+
+  class Person {
+    // attribute
+    #name;
+
+    // constructor
+    constructor(name) {
+      this.#name = name;
+    }
+
+    get name() {
+      return this.#name;
+    }
+
+    set name(name) {
+      this.#name = name;
+    }
+
+  }
+
+  var person = new Person("Kavindu");
+
+  console.log(person.name);
+
+  person.name = "Ravindu";
+
+  console.log(person.name);
+
+  console.log(person.#name);
+
+</script>
+
+</body>
+</html>
