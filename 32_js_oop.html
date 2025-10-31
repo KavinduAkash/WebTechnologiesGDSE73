@@ -8,7 +8,8 @@
 
 <script>
 
-  class Person {
+  // ================ Encapsulation ================
+  /*class Person {
     // attribute
     #name;
 
@@ -35,7 +36,24 @@
 
   console.log(person.name);
 
-  console.log(person.#name);
+  console.log(person.#name);*/
+
+  // ================ Inheritance ================
+  class Animal {
+    eat() {
+      console.log("Animal is eating!!!");
+    }
+  }
+
+  class Dog extends Animal{
+    bark() {
+      console.log("Dog is barking!!!");
+    }
+  }
+
+  var d = new Dog();
+  d.bark();
+  d.eat();
 
 </script>
 
