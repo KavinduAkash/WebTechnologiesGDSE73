@@ -7,7 +7,7 @@ const loads_student_tbl = () => {
     let student_list = get_students();
 
     student_list.map((obj, index) => {
-        let tbl_row = `<tr> <td>${obj.f_name}</td> <td>${obj.l_name}</td> <td>${obj.address}</td> <tr>`;
+        let tbl_row = `<tr data-index="${index}"> <td>${obj.f_name}</td> <td>${obj.l_name}</td> <td>${obj.address}</td> <tr>`;
         $("#student_tbl_body").append(tbl_row);
     });
 }
@@ -27,7 +27,8 @@ $("#student_save_btn").on("click", function () {
 
 $("#student_tbl_body").on('click', 'tr', function () {
     console.log($(this).index())
-    tbl_row = $(this).index();
+    // tbl_row = $(this).index();
+    tbl_row = $(this).data('index');
 
     let student_obj = get_student_detail(tbl_row);
 
