@@ -6,12 +6,49 @@
 </head>
 <body>
 
-<a href="">Home</a>
-<a href="customer.html">Customer</a>
-<a href="item.html">Item</a>
+<a href="#" id="home_tab">Home</a>
+<a href="#" id="customer_tab">Customer</a>
+<a href="#" id="item_tab">Item</a>
 
-<h1>Home 01</h1>
-<p>This is the Home Page</p>
+<!--section 1: home page content-->
+<section id="home_content">
+    <h1>Home 01</h1>
+    <p>This is the Home Page</p>
+</section>
+
+<!--section 2: customer page content-->
+<section id="customer_content">
+    <h1>Customer</h1>
+    <p>This is my customer management!</p>
+</section>
+
+<!--section 3: item page content-->
+<section id="item_content">
+    <h1>Items</h1>
+    <p>This is the Item Management!</p>
+</section>
+
+<script src="assets/lib/jquery.js"></script>
+<script>
+
+    var display_none = {
+        display:'none'
+    }
+
+    var display_block = {
+        display:'block'
+    }
+
+    $('#customer_content').css(display_none);
+    $('#item_content').css(display_none);
+
+    $('#customer_tab').on('click', function () {
+        $('#customer_content').css(display_block);
+        $('#home_content').css(display_none);
+        $('#item_content').css(display_none);
+    })
+
+</script>
 
 </body>
 </html>
