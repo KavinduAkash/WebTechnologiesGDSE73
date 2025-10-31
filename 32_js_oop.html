@@ -39,7 +39,7 @@
   console.log(person.#name);*/
 
   // ================ Inheritance ================
-  class Animal {
+  /*class Animal {
     eat() {
       console.log("Animal is eating!!!");
     }
@@ -53,7 +53,30 @@
 
   var d = new Dog();
   d.bark();
-  d.eat();
+  d.eat();*/
+
+  // ================ Polymorphism ================
+  class Animal {
+    speak() {
+      console.log("Animal is speaking!!!");
+    }
+  }
+
+  class Dog extends Animal{
+    speak() {
+      console.log("Woof Woof!!!");
+    }
+  }
+
+  class Cat extends Animal{
+    speak() {
+      console.log("Meew Meew!!!");
+    }
+  }
+
+  const animals = [new Dog(), new Cat()];
+  animals[0].speak();
+  animals[1].speak();
 
 </script>
 
