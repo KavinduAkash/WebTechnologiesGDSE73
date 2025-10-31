@@ -48,6 +48,20 @@
         $('#item_content').css(display_none);
     })
 
+    $('#home_tab').on('click', function () {
+        $('#customer_content').css(display_none);
+        $('#home_content').css(display_block);
+        $('#item_content').css(display_none);
+    })
+
+    $('#item_tab').on('click', function () {
+        $('#customer_content').css(display_none);
+        $('#home_content').css(display_none);
+        $('#item_content').css(display_block);
+    })
+
+
+
 </script>
 
 </body>
