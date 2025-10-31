@@ -1,4 +1,4 @@
-import student_db from "../db/DB.js";
+import {student_db, course_db} from "../db/DB.js";
 import StudentDTO from "../dto/StudentDTO.js";
 
 // ================ Add Student ===================

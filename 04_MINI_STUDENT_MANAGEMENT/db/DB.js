@@ -1,3 +1,4 @@
 let student_db = [];
+let course_db = [];
 
-export default student_db;
+export {student_db, course_db};
