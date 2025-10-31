@@ -23,10 +23,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                    <li class="nav-item" id="student_tab">
                         <span class="nav-link">Student</span>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="course_tab">
                         <span class="nav-link">Course</span>
                     </li>
                 </ul>
@@ -37,7 +37,7 @@
 </header>
 
 <!--student mgt-->
-<main class="container">
+<main id="student_content" class="container">
 
     <section class="row">
 
@@ -95,11 +95,88 @@
 
 </main>
 
+<!--course mgt-->
+<main id="course_content" class="container">
+
+    <section class="row">
+
+        <!-- student form -->
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <form>
+
+                        <h3 class="text-center">Course Management</h3>
+
+                        <div class="mb-3">
+                            <label for="course_name" class="form-label">Course Name</label>
+                            <input type="text" class="form-control" id="course_name">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="description" class="form-label">description</label>
+                            <textarea class="form-control" placeholder="Course description" id="description" style="height: 100px"></textarea>
+                        </div>
+
+                        <button type="button" class="btn btn-success" id="course_save_btn">Save</button>
+                        <button type="button" class="btn btn-primary" id="course_update_btn">Update</button>
+                        <button type="button" class="btn btn-danger" id="course_delete_btn">Delete</button>
+                        <button type="reset" class="btn btn-info" id="course_reset_btn">Clear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- student tbl -->
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Description</th>
+                </tr>
+                </thead>
+                <tbody id="course_tbl_body">
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
 <!--script-->
 <script src="../assets/lib/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script type="module" src="controller/StudentController.js"></script>
+
+<script>
+
+    var display_block = {
+        display: 'block'
+    }
+    var display_none = {
+        display: 'none'
+    }
+
+    $('#student_content').css(display_block);
+    $('#course_content').css(display_none);
+
+    $('#student_tab').on('click', function () {
+        $('#student_content').css(display_block);
+        $('#course_content').css(display_none);
+    })
+
+    $('#course_tab').on('click', function () {
+        $('#student_content').css(display_none);
+        $('#course_content').css(display_block);
+    })
+
+</script>
 
 </body>
 
