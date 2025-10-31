@@ -4,88 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Friday</title>
-    <style>
-        body {
-            background-color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            margin: 0;
-        }
-
-        .container {
-            position: relative;
-        }
-
-        .text {
-            font-family: 'Arial Black', sans-serif;
-            font-size: 8vw;
-            font-weight: 900;
-            font-style: italic;
-            text-transform: uppercase;
-            text-align: center;
-            line-height: 1;
-            letter-spacing: 4px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .black, .friday {
-            -webkit-text-stroke: 2px #ffffff; /* white border */
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
-            background-size: 200% 200%;
-            animation: shadeMove 4s ease-in-out infinite alternate;
-            color: transparent;
-        }
-
-        .black {
-            background-image: linear-gradient(180deg, #000000 0%, #ff0000 100%);
-        }
-
-        .friday {
-            background-image: linear-gradient(180deg, #ffffff 0%, #ff0000 100%);
-        }
-
-        @keyframes shadeMove {
-            0% { background-position: top left; }
-            100% { background-position: bottom right; }
-        }
-
-        /* 🌟 Twinkling stars */
-        .star {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: white;
-            border-radius: 50%;
-            opacity: 0;
-            animation: twinkle 2s infinite ease-in-out;
-        }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0; transform: scale(0.5); }
-            50% { opacity: 1; transform: scale(1.5); }
-        }
-    </style>
 </head>
 <body>
-<div class="container">
-    <div class="text">
-        <div class="black">BLACK</div>
-        <div class="friday">FRIDAY</div>
-    </div>
 
-    <!-- ✨ Twinkling stars (you can add or adjust positions) -->
-    <div class="star" style="top: -30px; left: -60px; animation-delay: 0s;"></div>
-    <div class="star" style="top: 10px; right: -50px; animation-delay: 0.5s;"></div>
-    <div class="star" style="bottom: 20px; left: -40px; animation-delay: 1s;"></div>
-    <div class="star" style="bottom: -30px; right: 60px; animation-delay: 1.5s;"></div>
-    <div class="star" style="top: -50px; right: 100px; animation-delay: 0.8s;"></div>
-    <div class="star" style="bottom: 60px; left: 100px; animation-delay: 1.2s;"></div>
-</div>
+<script>
+
+    class X {
+        #name;
+        constructor(name, age) {
+            this.#name = name;
+            this.age = age;
+        }
+
+        get name() {
+            var val = this.#getMyName();
+            return val;
+        }
+
+        #getMyName() {
+            return this.#name;
+        }
+    }
+
+    var x = new X("Kavindu", 28);
+
+
+    console.log(x.getMyName);
+
+</script>
 </body>
 </html>

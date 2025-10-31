@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Student Management System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- external css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+<!--header-->
+<header class="mb-3">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SMSys</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <span class="nav-link">Student</span>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link">Course</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+<!--student mgt-->
+<main class="container">
+
+  <section class="row">
+
+    <!-- student form -->
+    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+      <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <form>
+
+            <h3 class="text-center">Student Management</h3>
+
+            <div class="mb-3">
+              <label for="f_name" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="f_name">
+            </div>
+
+            <div class="mb-3">
+              <label for="l_name" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="l_name">
+            </div>
+
+            <div class="mb-3">
+              <label for="address" class="form-label">Last Name</label>
+              <textarea class="form-control" placeholder="Enter student's address" id="address" style="height: 100px"></textarea>
+            </div>
+
+            <button type="button" class="btn btn-success" id="student_save_btn">Save</button>
+            <button type="button" class="btn btn-primary" id="student_update_btn">Update</button>
+            <button type="button" class="btn btn-danger" id="student_delete_btn">Delete</button>
+            <button type="reset" class="btn btn-info">Clear</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- student tbl -->
+    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Address</th>
+        </tr>
+        </thead>
+        <tbody id="student_tbl_body">
+        <tr>
+          <td>Pathum</td>
+          <td>Mendis</td>
+          <td>Colombo</td>
+        </tr>
+        <tr>
+          <td>Janith</td>
+          <td>Kaushalya</td>
+          <td>Panadura</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!--script-->
+<script src="assets/lib/jquery.js"></script>
+
+<script>
+
+  // ==================== Add Student =======================
+
+  const add_student_record = (f_name, l_name, address) => {
+    let tbl_row = `<tr> <td>${f_name}</td> <td>${l_name}</td> <td>${address}</td> <tr>`;
+    $("#student_tbl_body").append(tbl_row);
+  }
+
+  $("#student_save_btn").on("click", function () {
+    console.log("save btn clicked!!!")
+    let f_name = $("#f_name").val();
+    let l_name = $("#l_name").val();
+    let address = $("#address").val();
+
+    add_student_record(f_name, l_name, address);
+  });
+
+  // ==================== Select Student =======================
+
+  /*
+  $("tr").on('click', () => {
+    console.log("Tr clicked!");
+  });
+   */
+
+  $("#student_tbl_body").on('click', 'tr', function () {
+    // let result = $(this).index();
+    let tds = $(this).children();
+
+    let f_name = tds.eq(0).text(); // fname
+    let l_last = tds.eq(1).text(); // lname
+    let address = tds.eq(2).text(); // address
+
+    console.log(f_name);
+    console.log(l_last);
+    console.log(address);
+  });
+
+</script>
+
+</body>
+
+</html>
