@@ -56,7 +56,7 @@
   d.eat();*/
 
   // ================ Polymorphism ================
-  class Animal {
+  /*class Animal {
     speak() {
       console.log("Animal is speaking!!!");
     }
@@ -76,8 +76,24 @@
 
   const animals = [new Dog(), new Cat()];
   animals[0].speak();
-  animals[1].speak();
+  animals[1].speak();*/
 
+  // ================ Abstraction ================
+
+  class Vehicle {
+    start() {
+      this.#checkEngine();
+      console.log("Start vehicle...")
+    }
+
+    #checkEngine() {
+      console.log("Check enginee...");
+    }
+
+  }
+
+  let v = new Vehicle();
+  v.start();
 </script>
 
 </body>
